@@ -59,25 +59,25 @@ int main(int argc, char **argv){
 	}
 
 	char *args[3] = {mx_strtrim(argv[1]),mx_strtrim(argv[3]),mx_strtrim(argv[4])};
-	for(int i = 0; i < 3; ++i) printf("args[%d]:%s\n", i, args[i]);
+	//for(int i = 0; i < 3; ++i) printf("args[%d]:%s\n", i, args[i]);
 
 	switch (op){
 		case '+':
-			add(args);
+			calc(args, '+');
 			break;
 		case '-':
-			printf("-\n");
+			calc(args, '-');
 			break;
 		case '*':
-			printf("*\n");
+			calc(args, '*');
 			break;
 		case '/':
-			if(mx_strcmp(args[1], "0") == 0){
+			if(mx_strcmp(mx_strtrim(args[1]), "0") == 0){
 				mx_printerr("\n");
 				exit(0);
 			}
 			else {
-				printf("/\n");
+				calc(args, '/');
 			}
 			break;
 		case '?':

@@ -27,7 +27,7 @@ char *mx_strjoin(const char *s1, const char *s2);
 char *mx_strcpy(char *dst, const char* src);
 char *mx_strdup(const char *str);
 
-void add(char **args);
+void calc(char **args, int sign);
 
 #endif
 
