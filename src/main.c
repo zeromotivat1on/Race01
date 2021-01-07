@@ -39,7 +39,6 @@ int main(int argc, char **argv){
 	for(int i = 1; i < argc; ++i){
 		char *temp = mx_strtrim(argv[i]);
 		for(int j = 0; j < mx_strlen(temp); ++j){
-			// check operands
 			if(i != 2){
 				if(temp[j] == '?') continue;
 				if(!mx_isdigit(temp[j])){
@@ -57,10 +56,9 @@ int main(int argc, char **argv){
 			}
 		}
 	}
-
+	//array which consists of first, second operand and result
 	char *args[3] = {mx_strtrim(argv[1]),mx_strtrim(argv[3]),mx_strtrim(argv[4])};
-	//for(int i = 0; i < 3; ++i) printf("args[%d]:%s\n", i, args[i]);
-
+	//depending on operation sign, call the func calc to calculate and print result
 	switch (op){
 		case '+':
 			calc(args, '+');
@@ -72,7 +70,8 @@ int main(int argc, char **argv){
 			calc(args, '*');
 			break;
 		case '/':
-			if(mx_strcmp(mx_strtrim(args[1]), "0") == 0){
+			//avoid division by 0
+			if(mx_strcmp(args[1], "0") == 0){
 				mx_printerr("\n");
 				exit(0);
 			}
