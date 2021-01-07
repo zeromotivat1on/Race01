@@ -3,7 +3,7 @@ NAME = part_of_the_matrix
 SRC_FILES = $(wildcard src/*.c)
 INC_FILES = $(wildcard inc/*.h)
 
-CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic
+CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic -o $(NAME)
 
 all: install
 

@@ -26,8 +26,10 @@ void mx_printchar(char c);
 char *mx_strjoin(const char *s1, const char *s2);
 char *mx_strcpy(char *dst, const char* src);
 char *mx_strdup(const char *str);
+char *mx_itoa(int number);
+void mx_str_reverse(char *str);
 
-void calc(char **args, int sign);
+void calc(char **args, char sign);
 
 #endif
 
