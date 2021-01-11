@@ -15,9 +15,9 @@ Error handling. The program prints errors to the standard error streamstderr:\
 • if the number of arguments is not equal to 4, the program prints: usage: ./part_of_the_matrix [operand1] [operation] [operand2] [result]\
 • in case of invalid operation the program prints: Invalid operation: <value>\
 • in case of invalid operands the program prints: Invalid operand: <value>\
-• in case of invalid operation the program prints: Invalid result: <value>\
+• in case of invalid operation the program prints: Invalid result: <value>
 
-In addition:\
+#In addition:\
 The program also implements calculations, when we have ? in operation. It find all necessary results and sort them in such order: + - * / .\
 Also, the program supports ? in operands and result, but with some restrictions:\
 it works, when we do not separate ? in operands or result, \
