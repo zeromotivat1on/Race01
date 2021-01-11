@@ -16,10 +16,9 @@ Error handling. The program prints errors to the standard error streamstderr:\
 • in case of invalid operation the program prints: Invalid operation: <value>\
 • in case of invalid operands the program prints: Invalid operand: <value>\
 • in case of invalid operation the program prints: Invalid result: <value>
-
 # Addition features:
 The program also implements calculations, when we have ? in operation. It find all necessary results and sort them in such order: + - * / .\
-Also, the program supports ? in operands and result, but with some restrictions:\
-it works, when we do not separate ? in operands or result, \
+Also, the program supports ? in operands and result, but with some restrictions.\
+It works, when we do not separate ? in operands or result:\
 Correct e.g. : "1??3" "??9" "123?" "12?????3" etc.\
 Incorrect e.g. : "?1?" "12??3?" "1?23??4?9" etc.
