@@ -17,7 +17,7 @@ Error handling. The program prints errors to the standard error streamstderr:\
 • in case of invalid operands the program prints: Invalid operand: <value>\
 • in case of invalid operation the program prints: Invalid result: <value>
 
-# In addition:
+# Addition features:
 The program also implements calculations, when we have ? in operation. It find all necessary results and sort them in such order: + - * / .\
 Also, the program supports ? in operands and result, but with some restrictions:\
 it works, when we do not separate ? in operands or result, \
