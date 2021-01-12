@@ -1,17 +1,17 @@
 # Race01
 A program that decodes all valid variations of an encrypted math expression.\
 The program takes four arguments:\
-• integer operands:operand1 and operand2\
-• operationoperation\
-• result of the math operation result\
+• integer operands: operand1 and operand2\
+• operation: operation\
+• result of the math operation: result\
 Encoder must support four math operations: addition + , subtraction - , multiplication *  and division / . \
-Operands and the result may consist of hidden digits marked by?character.\
-One digit per one ? . The program must not print zeros if they are before afull number.\
+Operands and the result may consist of hidden digits marked by ? character.\
+One digit per one ? . The program must not print zeros if they are before a full number.\
 The program finds out which digits are hidden by ? in order to maintain a mathematical expression valid. \
 It outputs all valid variations (one per line).\
 Valid expressions in output must be sorted in ascending order of operand1.\
 Operands, operations, equal sign and the result in output are separated by a single space character.\
-Error handling. The program prints errors to the standard error streamstderr:\
+Error handling. The program prints errors to the standard error stream stderr:\
 • if the number of arguments is not equal to 4, the program prints: usage: ./part_of_the_matrix [operand1] [operation] [operand2] [result]\
 • in case of invalid operation the program prints: Invalid operation: <value>\
 • in case of invalid operands the program prints: Invalid operand: <value>\
