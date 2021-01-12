@@ -40,7 +40,9 @@ void calc(char **args, char sign){
 			index++;
 		}
 	}
-	
+	printf("size[0]:%d\tq_size[0]:%d\tcoff[0]:%d\n",mx_atoi(size[0]),mx_atoi(q_size[0]), mx_atoi(coff[0]));
+	printf("size[1]:%d\tq_size[1]:%d\tcoff[1]:%d\n",mx_atoi(size[1]),mx_atoi(q_size[1]), mx_atoi(coff[1]));
+	printf("size[2]:%d\tq_size[2]:%d\tcoff[2]:%d\n",mx_atoi(size[2]),mx_atoi(q_size[2]), mx_atoi(coff[2]));
 	int res_size = 0;
 	if(mx_atoi(q_size[0]) < 1000 || mx_atoi(q_size[1]) < 1000){
 		if(mx_atoi(q_size[0]) > mx_atoi(q_size[1])) res_size = mx_atoi(q_size[0]);
@@ -50,13 +52,13 @@ void calc(char **args, char sign){
 	//array of result strings (e.g str = "1 + 1 = 2\n")
 	char **strs_res = (char **)malloc(36 * res_size * sizeof(char *));
 	int str_amnt = 0; //amount of total result strings
-	for(int k = mx_atoi(size[0]); k <= mx_atoi(q_size[0]); k += mx_atoi(coff[1])){
+	for(int k = mx_atoi(size[0]); k <= mx_atoi(q_size[0]); k += mx_atoi(coff[0])){
 		if(k > __INT_MAX__) exit(0);
 		for(int l = mx_atoi(size[1]); l <= mx_atoi(q_size[1]); l += mx_atoi(coff[1])){
 			if(l > __INT_MAX__) exit(0);
 			for(int m = mx_atoi(size[2]); m <= mx_atoi(q_size[2]); m += mx_atoi(coff[2])){
 			if(m > __INT_MAX__) exit(0);
-				if((sign == '+' || sign == '?') && ((len[0] <= len[2]) && (len[1] <= len[2]))){
+				if(sign == '+' || sign == '?'){
 					if((k + l) > __INT_MAX__) exit(0);
 					else if((k + l) == m){
 						strs_res[str_amnt] = mx_strjoin(strs_res[str_amnt], mx_itoa(k));
@@ -81,7 +83,7 @@ void calc(char **args, char sign){
 						if(sign != '?') break;
 					}
 				}
-				if((sign == '*' || sign == '?') && ((len[0] <= len[2]) && (len[1] <= len[2]))){
+				if(sign == '*' || sign == '?'){
 					if((k * l) > __INT_MAX__) exit(0);
 					else if((k * l) == m){
 						strs_res[str_amnt] = mx_strjoin(strs_res[str_amnt], mx_itoa(k));
